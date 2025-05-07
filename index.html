@@ -74,8 +74,8 @@
 </head>
 <body>
 
-  <!-- Moved navbar ABOVE the header -->
   <nav class="navbar">
+    <a href="#" onclick="goHome()">Home</a>
     <a href="#" onclick="showSection('academic')">Academic</a>
     <a href="#" onclick="showSection('skills')">Skills</a>
     <a href="#" onclick="showSection('projects')">Projects</a>
@@ -83,7 +83,7 @@
     <a href="#" onclick="showSection('service')">Service</a>
   </nav>
 
-  <header>
+  <header id="home">
     <h1>Reannah Sheantelle Fines</h1>
     <img src="https://github.com/reannahsfines/portfolio/blob/main/pictureofmyself.jpg?raw=true" alt="Photo of Reannah">
     <p class="content">
@@ -129,8 +129,20 @@
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('active');
       });
+      document.getElementById('home').style.display = 'none';
       document.getElementById(id).classList.add('active');
     }
+
+    function goHome() {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById('home').style.display = 'block';
+    }
+
+    window.onload = function () {
+      goHome();
+    };
   </script>
 
 </body>
