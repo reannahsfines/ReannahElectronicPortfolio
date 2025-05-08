@@ -11,10 +11,12 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
+
     body {
       line-height: 1.6;
       background-color: #f9f9f9;
     }
+
     .navbar {
       background-color: #333;
       color: white;
@@ -26,36 +28,44 @@
       top: 0;
       z-index: 1000;
     }
+
     .navbar a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
+
     .navbar a:hover {
       color: #ffcc00;
     }
+
     header {
       text-align: center;
       padding: 2rem;
       background-color: #e0e0e0;
     }
+
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
     section {
       display: none;
       padding: 2rem;
     }
+
     section.active {
       display: block;
     }
+
     img {
       width: 200px;
       border-radius: 10px;
       margin-bottom: 1rem;
     }
+
     .content {
       max-width: 800px;
       margin: auto;
@@ -63,6 +73,7 @@
   </style>
 </head>
 <body>
+
   <nav class="navbar">
     <a href="#" onclick="goHome()">Home</a>
     <a href="#" onclick="showSection('academic')">Academic</a>
@@ -70,8 +81,8 @@
     <a href="#" onclick="showSection('projects')">Projects</a>
     <a href="#" onclick="showSection('contact')">Contact</a>
     <a href="#" onclick="showSection('service')">Service</a>
-    <a href="#" onclick="showSection('resume')">Resume</a>
   </nav>
+
   <header id="home">
     <h1>Reannah Sheantelle Fines</h1>
     <img src="https://github.com/reannahsfines/portfolio/blob/main/pictureofmyself.jpg?raw=true" alt="Photo of Reannah">
@@ -79,6 +90,7 @@
       My name is Reannah Sheantelle Fines, and I am a senior graduating in 2025. Throughout high school, I’ve always been a quiet and shy student, but I never let that stop me from getting my work done and staying focused. My pathway in high school was Cybersecurity, and taking that class has been a really fun and eye-opening experience. It introduced me to the world of coding and technology, and I learned a lot about data, and coding. Even though I enjoyed Cybersecurity, I plan to major in Psychology in college. Eventually, I want to pursue a career in Neuropsychology, where I can explore the connection between the brain and behavior. I’m excited for the future and proud of everything I’ve accomplished so far.
     </p>
   </header>
+
   <section id="academic" class="content">
     <h2>Career Objective</h2>
     <p>
@@ -89,45 +101,62 @@
     <h3>Future Goals</h3>
     <p>Get an internship, improve public speaking, graduate with Diploma, Attend UH Manoa, major in Psychology, then start a career in Neuropsychology</p>
   </section>
-  <section id="skills" class="content">
-    <h2>Skills</h2>
-    <p>Basic coding (HTML, CSS), cybersecurity concepts, problem-solving, analytical thinking, time management, and attention to detail.</p>
-  </section>
+
+ <section id="skills" class="content">
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>HTML (HyperText Markup Language):</strong> Used to structure and organize content on web pages.</li>
+    <li><strong>CSS (Cascading Style Sheets):</strong> Applied to style and design websites for a clean and responsive layout.</li>
+    <li><strong>JavaScript:</strong> Basic understanding of scripting to create interactive web elements.</li>
+    <li><strong>Cybersecurity Concepts:</strong> Familiar with online safety practices, secure data handling, and basic network defense.</li>
+    <li><strong>Problem-Solving:</strong> Able to identify issues and think critically to develop effective solutions.</li>
+    <li><strong>Analytical Thinking:</strong> Comfortable breaking down complex tasks and interpreting data logically.</li>
+    <li><strong>Time Management:</strong> Skilled in prioritizing tasks to meet deadlines and maintain productivity.</li>
+    <li><strong>Attention to Detail:</strong> Careful and precise when completing assignments or coding tasks.</li>
+    <li><strong>Resilience:</strong> Remains focused and determined when facing challenges or setbacks.</li>
+    <li><strong>Adaptability:</strong> Quickly adjusts to new situations, tools, or environments with a positive attitude.</li>
+  </ul>
+</section>
+
+
   <section id="projects" class="content">
     <h2>Projects</h2>
     <p>Class projects from Cybersecurity pathway such as basic network security simulations, simple HTML webpages, and coding exercises demonstrating understanding of secure data handling.</p>
   </section>
+
   <section id="contact" class="content">
     <h2>Contact Information</h2>
     <p><strong>Full name:</strong> Reannah Sheantelle Fines</p>
     <p><strong>School Email:</strong> 2761300128@k12.hi.us</p>
     <p><strong>Personal Email:</strong> reannahsfines@gmail.com</p>
   </section>
+
   <section id="service" class="content">
-    <h2>Service</h2>
-    <p><strong>Babysitting</strong></p>
-    <ul>
-      <li>Supervised children during playtime and ensured safe, engaging activities.</li>
-      <li>Prepared snacks and meals based on dietary needs and preferences.</li>
-      <li>Assisted with homework and school assignments.</li>
-      <li>Organized bedtime routines including reading and quiet activities.</li>
-      <li>Ensure children's safety and comfort while parents were away.</li>
-      <li>Communicated with parents to provide updates on behavior and daily activities.</li>
-    </ul>
-    <p><strong>Care Home Assistance</strong></p>
-    <ul>
-      <li>Cleaned and sanitized common areas such as dining rooms and lounges.</li>
-      <li>Washed dishes and maintained kitchen cleanliness.</li>
-      <li>Did laundry, folded clothes, and organized residents' personal items.</li>
-      <li>Helped coordinate recreational activities like games or music time.</li>
-      <li>Provided companionship through conversation and activities.</li>
-      <li>Assisted staff with light errands and supply organization.</li>
-    </ul>
-  </section>
-  <section id="resume" class="content">
-    <h2>Resume</h2>
-    <p><a href="https://drive.google.com/file/d/1whUc3cY8KMCBOKX2lbKBuZLmtkbb7bfp/view?usp=sharing" target="_blank" rel="noopener noreferrer">View My Resume (PDF)</a></p>
-  </section>
+  <h2>Service</h2>
+
+  <p><strong>Babysitting</strong></p>
+  <ul>
+    <li>Supervised children during playtime and ensured safe, engaging activities.</li>
+    <li>Prepared snacks and meals based on dietary needs and preferences.</li>
+    <li>Assisted with homework and school assignments.</li>
+    <li>Organized bedtime routines including reading and quiet activities.</li>
+    <li>Ensure children's safety and comfort while parents were away.</li>
+    <li>Communicated with parents to provide updates on behavior and daily activities.</li>
+  </ul>
+
+  <p><strong>Care Home Assistance</strong></p>
+  <ul>
+    <li>Cleaned and sanitized common areas such as dining rooms and lounges.</li>
+    <li>Washed dishes and maintained kitchen cleanliness.</li>
+    <li>Did laundry, folded clothes, and organized residents' personal items.</li>
+    <li>Helped coordinate recreational activities like games or music time.</li>
+    <li>Provided companionship through conversation and activities.</li>
+    <li>Assisted staff with light errands and supply organization.</li>
+  </ul>
+
+  <br>
+</section>
+
   <script>
     function showSection(id) {
       document.querySelectorAll('section').forEach(section => {
@@ -136,16 +165,18 @@
       document.getElementById('home').style.display = 'none';
       document.getElementById(id).classList.add('active');
     }
+
     function goHome() {
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('active');
       });
       document.getElementById('home').style.display = 'block';
     }
+
     window.onload = function () {
       goHome();
     };
   </script>
-</body>
-</html
 
+</body>
+</html>
