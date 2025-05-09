@@ -30,6 +30,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .navbar a {
@@ -41,6 +43,16 @@
 
     .navbar a:hover {
       color: #ffcc00;
+    }
+
+    .search-bar {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
     }
 
     header {
@@ -96,20 +108,12 @@
       padding-left: 1rem;
       padding-right: 1rem;
     }
-
-    .search-bar {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
+    <input type="text" class="search-bar" placeholder="Search for something...">
     <a href="#" onclick="goHome()">Home</a>
     <a href="#" onclick="showSection('skills')">Skills</a>
     <a href="#" onclick="showSection('projects')">Projects</a>
@@ -146,8 +150,6 @@
       <br>
       <h3>Future Goals</h3>
       <p>Get an internship, improve public speaking, graduate with a diploma, attend UH Manoa, major in Psychology, and start a career in Neuropsychology</p>
-
-      <input type="text" class="search-bar" placeholder="Search for something...">
     </div>
   </section>
 
@@ -168,20 +170,20 @@
   </section>
 
   <section id="projects" class="content">
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>HTML Webpages:</strong> Designed and coded personal portfolios, informational pages, and presentation websites using semantic HTML.</li>
-    <li><strong>Coding Exercises on Secure Data Handling:</strong> Developed forms and login flows with input validation and security awareness techniques.</li>
-    <li><strong>Financial Management Project:</strong> Tracked stock trades using real-world market trends, developing analytical and budgeting skills.</li>
-    <li>
-      <strong>
-        <a href="https://docs.google.com/document/d/1AXyqYa8OqB9i7Nn45u3fRRynUmEzHusjluH1Zb-2wnc/edit?usp=sharing" target="_blank" style="color: inherit; text-decoration: underline;">
-          CTE Project Financial Management
-        </a>
-      </strong>: Documented a comprehensive approach to managing finances through budgeting, investment simulations, and strategic planning.
-    </li>
-  </ul>
-</section>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>HTML Webpages:</strong> Designed and coded personal portfolios, informational pages, and presentation websites using semantic HTML.</li>
+      <li><strong>Coding Exercises on Secure Data Handling:</strong> Developed forms and login flows with input validation and security awareness techniques.</li>
+      <li><strong>Financial Management Project:</strong> Tracked stock trades using real-world market trends, developing analytical and budgeting skills.</li>
+      <li>
+        <strong>
+          <a href="https://docs.google.com/document/d/1AXyqYa8OqB9i7Nn45u3fRRynUmEzHusjluH1Zb-2wnc/edit?usp=sharing" target="_blank" style="color: inherit; text-decoration: underline;">
+            CTE Project Financial Management
+          </a>
+        </strong>: Documented a comprehensive approach to managing finances through budgeting, investment simulations, and strategic planning.
+      </li>
+    </ul>
+  </section>
 
   <section id="service" class="content">
     <h2>Service</h2>
@@ -208,23 +210,23 @@
   </section>
 
   <section id="academics" class="content">
-  <h2>Academics</h2>
-  <p><strong>Current GPA:</strong> 3.5</p>
-  
-  <p>
-    <strong>Resume:</strong>
-    <a href="https://docs.google.com/document/d/1bj1FIQhDHt3JqF3KShaYKBGVtShGqrnfmGKA9HUonfw/edit?usp=sharing" target="_blank">
-      View My Resume
-    </a>
-  </p>
-  
-  <p>
-    <strong>Certifications:</strong>
-    <a href="https://drive.google.com/drive/folders/1qEiX48oejdqyKHIzpgUa9tp1gYmXfFtG?usp=drive_link" target="_blank">
-      View My Certifications
-    </a>
-  </p>
-</section>
+    <h2>Academics</h2>
+    <p><strong>Current GPA:</strong> 3.5</p>
+
+    <p>
+      <strong>Resume:</strong>
+      <a href="https://docs.google.com/document/d/1bj1FIQhDHt3JqF3KShaYKBGVtShGqrnfmGKA9HUonfw/edit?usp=sharing" target="_blank">
+        View My Resume
+      </a>
+    </p>
+
+    <p>
+      <strong>Certifications:</strong>
+      <a href="https://drive.google.com/drive/folders/1qEiX48oejdqyKHIzpgUa9tp1gYmXfFtG?usp=drive_link" target="_blank">
+        View My Certifications
+      </a>
+    </p>
+  </section>
 
   <script>
     function showSection(id) {
@@ -233,17 +235,18 @@
       });
       document.getElementById('home').classList.remove('active');
       document.getElementById(id).classList.add('active');
-    }
-
-    function goHome() {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active'); 
-      });
-document.getElementById('home').classList.add('active');
 }
+    function goHome() {
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.remove('active');
+  });
+  document.getElementById('home').classList.add('active');
+}
+
 window.onload = function () {
   goHome();
-};
-</script> 
+}; 
+
+    </script>
 </body> 
 </html>
