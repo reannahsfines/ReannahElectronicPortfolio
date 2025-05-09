@@ -238,24 +238,38 @@
   </section>
 
   <script>
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById('home').classList.remove('active');
-      document.getElementById(id).classList.add('active');
-}
-    function goHome() {
-  document.querySelectorAll('section').forEach(section => {
-    section.classList.remove('active');
-  });
-  document.getElementById('home').classList.add('active');
-}
+  function searchContent() {
+    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    const sections = document.querySelectorAll('.content');
 
-window.onload = function () {
-  goHome();
-}; 
+    sections.forEach(section => {
+      const sectionText = section.innerText.toLowerCase();
+      if (sectionText.includes(searchQuery)) {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    });
+  }
 
-    </script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById('home').classList.remove('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  function goHome() {
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.remove('active'); 
+    });
+    document.getElementById('home').classList.add('active');
+  }
+  
+  window.onload = function () {
+    goHome();
+  };
+</script>
 </body> 
 </html>
