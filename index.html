@@ -6,6 +6,8 @@
   <title>Reannah Sheantelle Fines</title>
   <style>
     * {
+      <style>
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -20,18 +22,17 @@
       min-height: 100vh;
     }
 
+    /* Updated navbar style with gradient */
     .navbar {
-      background-color: #2c3e50;
+      background: linear-gradient(to right, #4b6cb7, #182848); /* Cool gradient */
       color: white;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between; /* Space out navbar items */
+      align-items: center;
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
-      flex-wrap: wrap;
-      align-items: center;
     }
 
     .navbar a {
@@ -45,14 +46,20 @@
       color: #ffcc00;
     }
 
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    /* Search bar inside navbar */
     .search-bar {
-      width: 100%;
-      max-width: 300px;
-      padding: 10px;
+      width: 250px;
+      padding: 8px;
       font-size: 16px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      margin-top: 10px;
+      background-color: #fff;
+      color: #333;
     }
 
     header {
