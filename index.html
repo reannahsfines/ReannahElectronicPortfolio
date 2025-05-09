@@ -88,45 +88,46 @@
     <a href="#" onclick="showSection('skills')">Skills</a>
     <a href="#" onclick="showSection('projects')">Projects</a>
     <a href="#" onclick="showSection('service')">Service</a>
+    <a href="#" onclick="showSection('academics')">Academics</a>
   </nav>
 
-  <header id="home">
-    <img src="https://github.com/reannahsfines/portfolio/blob/main/pictureofmyself.jpg?raw=true" alt="Photo of Reannah">
-    <div class="header-info">
-      <h1>Reannah Sheantelle Fines</h1>
-      <p><strong>School Email:</strong> 2761300128@k12.hi.us</p>
-      <p><strong>Personal Email:</strong> reannahsfines@gmail.com</p>
-      <p><strong>Phone Number:</strong> (808) 202-7182</stomg></p>
+  <section id="home" class="active">
+    <header>
+      <img src="https://github.com/reannahsfines/portfolio/blob/main/pictureofmyself.jpg?raw=true" alt="Photo of Reannah">
+      <div class="header-info">
+        <h1>Reannah Sheantelle Fines</h1>
+        <p><strong>School Email:</strong> 2761300128@k12.hi.us</p>
+        <p><strong>Personal Email:</strong> reannahsfines@gmail.com</p>
+        <p><strong>Phone Number:</strong> (808) 202-7182</strong></p>
+      </div>
+    </header>
+
+    <div class="content">
+      <h2>Who Am I?</h2>
+      <p>
+        My name is Reannah Sheantelle Fines, and I am a senior graduating in 2025. Throughout high school, I’ve always been a quiet and shy student, but I never let that stop me from getting my work done and staying focused. My pathway in high school was Cybersecurity, and taking that class has been a really fun and eye-opening experience. It introduced me to the world of coding and technology, and I learned a lot about data and coding. Even though I enjoyed Cybersecurity, I plan to major in Psychology in college. Eventually, I want to pursue a career in Neuropsychology, where I can explore the connection between the brain and behavior. I’m excited for the future and proud of everything I’ve accomplished so far.
+      </p>
+
+      <h2>Career Objective</h2>
+      <p>
+        I want to pursue a career in Neuropsychology because I am deeply attracted by how the brain influences behavior, emotion, and thought. Understanding the effects of brain injuries and disorders of the daily life motivates me to explore the science behind the functions. I hope to work in clinical settings where I can assess and support individuals facing neurological or psychological challenges. My goal is to make a positive impact by helping patients and families better understand their mental health and treatment options. I am especially attracted to the idea of combining research with compassionate care to promote healing and awareness. Through continued education and hands-on experience, I aim to grow into a professional who contributes meaningfully to both the scientific community and the well-being of others.
+      </p>
+
+      <br>
+      <h3>Present Goals</h3>
+      <p>Maintain a GPA of 3.5 or higher</p>
+
+      <br>
+      <h3>Future Goals</h3>
+      <p>Get an internship, improve public speaking, graduate with a diploma, attend UH Manoa, major in Psychology, and start a career in Neuropsychology</p>
     </div>
-  </header>
-
-  <div class="content">
-    <h2>Who Am I?</h2>
-    <p>
-      My name is Reannah Sheantelle Fines, and I am a senior graduating in 2025. Throughout high school, I’ve always been a quiet and shy student, but I never let that stop me from getting my work done and staying focused. My pathway in high school was Cybersecurity, and taking that class has been a really fun and eye-opening experience. It introduced me to the world of coding and technology, and I learned a lot about data and coding. Even though I enjoyed Cybersecurity, I plan to major in Psychology in college. Eventually, I want to pursue a career in Neuropsychology, where I can explore the connection between the brain and behavior. I’m excited for the future and proud of everything I’ve accomplished so far.
-    </p>
-
-    <h2>Career Objective</h2>
-<p>
- I want to pursue a career in Neuropsychology because I am deeply attracted by how the brain influences behavior, emotion, and thought. Understanding the effects of brain injuries and disorders of the daily life motivates me to explore the science behind the functions. I hope to work in clinical settings where I can assess and support individuals facing neurological or psychological challenges. My goal is to make a positive impact by helping patients and families better understand their mental health and treatment options. I am especially attracted to the idea of combining research with compassionate care to promote healing and awareness. Through continued education and hands-on experience, I aim to grow into a professional who contributes meaningfully to both the scientific community and the well-being of others.
-</p>
-
-<br>
-
-<h3>Present Goals</h3>
-<p>Maintain a GPA of 3.5 or higher</p>
-
-<br>
-
-<h3>Future Goals</h3>
-<p>Get an internship, improve public speaking, graduate with a diploma, attend UH Manoa, major in Psychology, and start a career in Neuropsychology</p>
-
+  </section>
 
   <section id="skills" class="content">
     <h2>Skills</h2>
     <ul>
-      <li><strong>HTML (HyperText Markup Language):</strong> Used to structure and organize content on web pages.</li>
-      <li><strong>CSS (Cascading Style Sheets):</strong> Applied to style and design websites for a clean and responsive layout.</li>
+      <li><strong>HTML:</strong> Used to structure and organize content on web pages.</li>
+      <li><strong>CSS:</strong> Applied to style and design websites for a clean and responsive layout.</li>
       <li><strong>JavaScript:</strong> Basic understanding of scripting to create interactive web elements.</li>
       <li><strong>Cybersecurity Concepts:</strong> Familiar with online safety practices, secure data handling, and basic network defense.</li>
       <li><strong>Problem-Solving:</strong> Able to identify issues and think critically to develop effective solutions.</li>
@@ -174,12 +175,23 @@
     </ul>
   </section>
 
+  <section id="academics" class="content">
+    <h2>Academics</h2>
+    <p><strong>Current GPA:</strong> 3.5</p>
+    <p>
+      <strong>Resume:</strong> 
+      <a href="https://docs.google.com/document/d/1bj1FIQhDHt3JqF3KShaYKBGVtShGqrnfmGKA9HUonfw/edit?usp=sharing" target="_blank">
+        View My Resume
+      </a>
+    </p>
+  </section>
+
   <script>
     function showSection(id) {
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('active');
       });
-      document.getElementById('home').style.display = 'none';
+      document.getElementById('home').classList.remove('active');
       document.getElementById(id).classList.add('active');
     }
 
@@ -187,7 +199,7 @@
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('active');
       });
-      document.getElementById('home').style.display = 'flex';
+      document.getElementById('home').classList.add('active');
     }
 
     window.onload = function () {
