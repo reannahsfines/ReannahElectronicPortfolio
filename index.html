@@ -4,30 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reannah Sheantelle Fines</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Arial', sans-serif;
     }
 
     body {
       line-height: 1.6;
-      background: linear-gradient(to bottom, #f9f9f9, #f0f0f0);
+      background-color: #f9f9f9;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     .navbar {
-      background-color: #333;
+      background: linear-gradient(45deg, #ff6b6b, #f0a500);
       color: white;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -36,18 +35,27 @@
     .navbar a {
       color: white;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
+      margin: 0 1rem;
       transition: color 0.3s;
     }
 
     .navbar a:hover {
-      color: #ffcc00;
+      color: #fff;
+      border-bottom: 2px solid white;
+    }
+
+    .navbar input[type="search"] {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
     }
 
     header {
       padding: 2rem;
-      background-color: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #e0e0e0;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -56,8 +64,7 @@
 
     header img {
       width: 150px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
 
     .header-info {
@@ -66,17 +73,13 @@
 
     header h1 {
       font-size: 2rem;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
     }
 
     .content {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 2rem;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex: 1;
     }
 
     section {
@@ -89,23 +92,6 @@
 
     h2 {
       margin-top: 2rem;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-    }
-
-    .card {
-      background-color: #f7f7f7;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .card:hover {
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      background-color: #f0f0f0;
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
     }
 
     footer {
@@ -116,45 +102,46 @@
       margin-top: auto;
     }
 
-    #search-bar {
-      padding: 0.5rem;
-      border: 2px solid #333;
-      border-radius: 25px;
-      margin: 1rem auto;
-      display: block;
-      width: 80%;
-      font-size: 1rem;
+    /* Add book images or visual content */
+    .side-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-left: 20px;
     }
 
+    /* Make the academic section look more stylish */
     #academics.content {
       padding-left: 1rem;
       padding-right: 1rem;
     }
 
-    /* Search bar icon */
-    .search-icon {
-      position: absolute;
-      right: 15px;
-      top: 10px;
-      color: #333;
+    .image-container {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
     }
 
-    .search-bar-container {
-      position: relative;
-      max-width: 400px;
-      margin: 0 auto;
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
     }
-
   </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <a href="#" onclick="goHome()">Home</a>
-    <a href="#" onclick="showSection('skills')">Skills</a>
-    <a href="#" onclick="showSection('projects')">Projects</a>
-    <a href="#" onclick="showSection('service')">Service</a>
-    <a href="#" onclick="showSection('academics')">Academics</a>
+    <div>
+      <a href="#" onclick="goHome()">Home</a>
+      <a href="#" onclick="showSection('skills')">Skills</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('service')">Service</a>
+      <a href="#" onclick="showSection('academics')">Academics</a>
+    </div>
+    <input type="search" placeholder="Search...">
   </nav>
 
   <section id="home" class="active">
@@ -171,106 +158,73 @@
     <div class="content">
       <h2>Who Am I?</h2>
       <p>
-        My name is Reannah Sheantelle Fines, and I am a senior graduating in 2025. Throughout high school, I’ve always been a quiet and shy student, but I never let that stop me from getting my work done and staying focused. My pathway in high school was Cybersecurity, and taking that class has been a really fun and eye-opening experience. It introduced me to the world of coding and technology, and I learned a lot about data and coding. Even though I enjoyed Cybersecurity, I plan to major in Psychology in college. Eventually, I want to pursue a career in Neuropsychology, where I can explore the connection between the brain and behavior. I’m excited for the future and proud of everything I’ve accomplished so far.
+        My name is Reannah Sheantelle Fines, and I am a senior graduating in 2025...
       </p>
 
       <h2>Career Objective</h2>
       <p>
-        I want to pursue a career in Neuropsychology because I am deeply attracted by how the brain influences behavior, emotion, and thought. Understanding the effects of brain injuries and disorders of the daily life motivates me to explore the science behind the functions. I hope to work in clinical settings where I can assess and support individuals facing neurological or psychological challenges. My goal is to make a positive impact by helping patients and families better understand their mental health and treatment options. I am especially attracted to the idea of combining research with compassionate care to promote healing and awareness. Through continued education and hands-on experience, I aim to grow into a professional who contributes meaningfully to both the scientific community and the well-being of others.
+        I want to pursue a career in Neuropsychology because I am deeply attracted...
       </p>
-
       <br>
+
       <h3>Present Goals</h3>
       <p>Maintain a GPA of 3.5 or higher</p>
 
       <br>
       <h3>Future Goals</h3>
-      <p>Get an internship, improve public speaking, graduate with a diploma, attend UH Manoa, major in Psychology, and start a career in Neuropsychology</p>
+      <p>Get an internship, improve public speaking...</p>
     </div>
   </section>
 
   <section id="skills" class="content">
     <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li><strong>HTML:</strong> Used to structure and organize content on web pages.</li>
-        <li><strong>CSS:</strong> Applied to style and design websites for a clean and responsive layout.</li>
-        <li><strong>JavaScript:</strong> Basic understanding of scripting to create interactive web elements.</li>
-        <li><strong>Cybersecurity Concepts:</strong> Familiar with online safety practices, secure data handling, and basic network defense.</li>
-        <li><strong>Problem-Solving:</strong> Able to identify issues and think critically to develop effective solutions.</li>
-        <li><strong>Analytical Thinking:</strong> Comfortable breaking down complex tasks and interpreting data logically.</li>
-        <li><strong>Time Management:</strong> Skilled in prioritizing tasks to meet deadlines and maintain productivity.</li>
-        <li><strong>Attention to Detail:</strong> Careful and precise when completing assignments or coding tasks.</li>
-        <li><strong>Resilience:</strong> Remains focused and determined when facing challenges or setbacks.</li>
-        <li><strong>Adaptability:</strong> Quickly adjusts to new situations, tools, or environments with a positive attitude.</li>
-      </ul>
-    </div>
+    <ul>
+      <li><strong>HTML:</strong> Used to structure and organize content on web pages.</li>
+      <li><strong>CSS:</strong> Applied to style and design websites for a clean and responsive layout.</li>
+      <li><strong>JavaScript:</strong> Basic understanding of scripting...</li>
+      <li><strong>Cybersecurity Concepts:</strong> Familiar with online safety practices...</li>
+      <li><strong>Problem-Solving:</strong> Able to identify issues and think critically...</li>
+    </ul>
   </section>
 
   <section id="projects" class="content">
     <h2>Projects</h2>
-    <div class="card">
-      <ul>
-        <li><strong>HTML Webpages:</strong> Designed and coded personal portfolios, informational pages, and presentation websites using semantic HTML.</li>
-        <li><strong>Coding Exercises on Secure Data Handling:</strong> Developed forms and login flows with input validation and security awareness techniques.</li>
-        <li><strong>Financial Management Project:</strong> Tracked stock trades using real-world market trends, developing analytical and budgeting skills.</li>
-        <li>
-          <strong>
-            <a href="https://docs.google.com/document/d/1AXyqYa8OqB9i7Nn45u3fRRynUmEzHusjluH1Zb-2wnc/edit?usp=sharing" target="_blank" style="color: inherit; text-decoration: underline;">
-              CTE Project Financial Management
-            </a>
-          </strong>: Documented a comprehensive approach to managing finances through budgeting, investment simulations, and strategic planning.
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li><strong>HTML Webpages:</strong> Designed and coded personal portfolios...</li>
+      <li><strong>Coding Exercises:</strong> Developed forms and login flows...</li>
+    </ul>
   </section>
 
   <section id="service" class="content">
     <h2>Service</h2>
+    <p><strong>Babysitting</strong></p>
+    <ul>
+      <li>Supervised children during playtime...</li>
+    </ul>
 
-    <div class="card">
-      <p><strong>Babysitting</strong></p>
-      <ul>
-        <li>Supervised children during playtime and ensured safe, engaging activities.</li>
-        <li>Prepared snacks and meals based on dietary needs and preferences.</li>
-        <li>Assisted with homework and school assignments.</li>
-        <li>Organized bedtime routines including reading and quiet activities.</li>
-        <li>Ensured children's safety and comfort while parents were away.</li>
-        <li>Communicated with parents to provide updates on behavior and daily activities.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <p><strong>Care Home Assistance</strong></p>
-      <ul>
-        <li>Cleaned and sanitized common areas such as dining rooms and lounges.</li>
-        <li>Washed dishes and maintained kitchen cleanliness.</li>
-        <li>Did laundry, folded clothes, and organized residents' personal items.</li>
-        <li>Helped coordinate recreational activities like games or music time.</li>
-        <li>Provided companionship through conversation and activities.</li>
-        <li>Assisted staff with light errands and supply organization.</li>
-      </ul>
-    </div>
+    <p><strong>Care Home Assistance</strong></p>
+    <ul>
+      <li>Cleaned and sanitized common areas...</li>
+    </ul>
   </section>
 
   <section id="academics" class="content">
     <h2>Academics</h2>
-    <div class="card">
-      <p><strong>Current GPA:</strong> 3.5</p>
-      <p>
-        <strong>Resume:</strong>
-        <a href="https://docs.google.com/document/d/1bj1FIQhDHt3JqF3KShaYKBGVtShGqrnfmGKA9HUonfw/edit?usp=sharing" target="_blank">View My Resume</a>
-      </p>
-      <p>
-        <strong>Certifications:</strong>
-        <a href="https://drive.google.com/drive/folders/1qEiX48oejdqyKHIzpgUa9tp1gYmXfFtG?usp=drive_link" target="_blank">View My Certifications</a>
-      </p>
+    <p><strong>Current GPA:</strong> 3.5</p>
+    
+    <p><strong>Resume:</strong>
+      <a href="https://docs.google.com/document/d/1bj1FIQhDHt3JqF3KShaYKBGVtShGqrnfmGKA9HUonfw/edit?usp=sharing" target="_blank">View My Resume</a>
+    </p>
+
+    <p><strong>Certifications:</strong>
+      <a href="https://drive.google.com/drive/folders/1qEiX48oejdqyKHIzpgUa9tp1gYmXfFtG?usp=drive_link" target="_blank">View My Certifications</a>
+    </p>
+
+    <div class="image-container">
+      <img src="https://www.w3schools.com/w3images/books.jpg" alt="Books">
+      <img src="https://www.w3schools.com/w3images/library.jpg" alt="Library">
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Reannah Sheantelle Fines. All Rights Reserved.</p>
-  </footer>
 
   <script>
     function showSection(id) {
@@ -295,3 +249,4 @@
 
 </body>
 </html>
+
